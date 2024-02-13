@@ -1,5 +1,5 @@
 # Multi-classification Task
-[Chinese](./README_EN.md) | English
+[Chinese](./README.md) | English
 ## Background
 Pychex company wants to gain a more detailed understanding of their target customer base and has provided us with a list of website addresses for over 10,000 companies, along with their company types. Pychex hopes that we can build a model that accurately classifies the type of company based on the provided company website.
 
