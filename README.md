@@ -7,14 +7,15 @@ Pychex公司想更详细地了解他们的目标客户群体，向我们提供�
 ## 数据集
 10000+行公司网站数据集中，共有17种公司类型，如下图所示：
 
-![image](https://github.com/Fent1/Multi_Classification/assets/43925272/09261a1c-b16d-4845-8eee-cfe781f39eee)
+<img src="https://github.com/Fent1/Multi_Classification/assets/43925272/09261a1c-b16d-4845-8eee-cfe781f39eee" alt="image" width="300" height="auto">
 
 
 ## 网络爬虫
 由于提供的数据集含有网站链接，我们需要用到网络爬虫提取网站中可用的信息，并新生成为Text列，作为自变量用于训练模型。
 由于10000+网站爬虫耗时巨大，为了加快爬虫速度，我们采用多进程的方法，利用多个cpu进行计算和信息读取，将爬虫完成时间缩减到6个小时。
 
-![image](https://github.com/Fent1/Multi_Classification/assets/43925272/2f879f23-714b-47b0-a3b5-46c90ec570ff)
+<img src="https://github.com/Fent1/Multi_Classification/assets/43925272/2f879f23-714b-47b0-a3b5-46c90ec570ff" alt="image" width="300" height="auto">
+
 提取网站中的句子作为有用的信息
 
 ## 模型选择
@@ -22,8 +23,7 @@ Pychex公司想更详细地了解他们的目标客户群体，向我们提供�
 
 ## 模型表现
 
-![image](https://github.com/Fent1/Multi_Classification/assets/43925272/b22b5893-5585-4d87-a52f-f127c06507dc)
-
+<img src="https://github.com/Fent1/Multi_Classification/assets/43925272/b22b5893-5585-4d87-a52f-f127c06507dc" alt="image" width="300" height="auto">
 
  - 对于这个数据集，模型性能很好，与之前的模型相比，准确率从30.42%增加到55.60%。
  - 精确率和召回率都很低，分别为32.37和35.51，这意味着这个分类模型仍然丢失一些特征的获取。
