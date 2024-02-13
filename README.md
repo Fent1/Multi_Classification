@@ -35,3 +35,4 @@ Pychex公司想更详细地了解他们的目标客户群体，向我们提供�
  2. 运行完成后会生Business_Industry_URLS_wText.csv文件，请在main.py中修改train_path对应的文件地址。
  3. 运行main.py。
 
+P.S: 由于某些原因现在还没有上传数据集Business_Industry_URLS.csv
