@@ -7,7 +7,7 @@ Pychex公司想更详细地了解他们的目标客户群体，向我们提供�
 ## 数据集
 10000+行公司网站数据集中，共有17种公司类型，如下图所示：
 
-<img src="https://github.com/Fent1/Multi_Classification/assets/43925272/09261a1c-b16d-4845-8eee-cfe781f39eee" alt="image" width="300" height="auto">
+<img src="https://github.com/Fent1/Multi_Classification/assets/43925272/09261a1c-b16d-4845-8eee-cfe781f39eee" alt="image" width="500" height="auto">
 
 
 ## 网络爬虫
