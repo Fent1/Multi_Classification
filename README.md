@@ -60,7 +60,32 @@ train.txt/val.txt/test.txt 文件格式：
 
                 # Combine Augmented data and training data together
                 !cat data/aug.txt data/train.txt > data/train_aug.txt
-                
+## 预训练模型微调
+
+                ! python PaddleNLP/applications/text_classification/multi_class/train.py \
+                    --do_train \
+                    --do_eval \
+                    --do_export \
+                    --model_name_or_path ernie-2.0-base-en \
+                    --output_dir checkpoint \
+                    --device gpu \
+                    --num_train_epochs 100 \
+                    --early_stopping True \
+                    --early_stopping_patience 5 \
+                    --learning_rate 3e-5 \
+                    --max_length 128 \
+                    --train_path ./data/train_aug.txt \
+                    --per_device_eval_batch_size 32 \
+                    --per_device_train_batch_size 32 \
+                    --metric_for_best_model accuracy \
+                    --load_best_model_at_end \
+                    --logging_steps 5 \
+                    --evaluation_strategy epoch \
+                    --save_strategy epoch \
+                    --save_total_limit 1
+
+本次训练在GPU环境中使用，可以指定gpus参数进行单卡/多卡训练。使用多卡训练可以指定多个GPU卡号，例如 --gpus "0,1"。如果设备只有一个GPU卡号默认为0，可使用nvidia-smi命令查看GPU使用情况。
+
 ## 模型表现
 输出打印示例：
 
