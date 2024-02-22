@@ -27,7 +27,9 @@ Erine-2.0提供三种训练策略：
 ![image](https://github.com/Fent1/Multi_Classification/assets/43925272/96fbccf6-5c12-4b20-a081-febd4720b8ce)
 
 策略一：Multi-task Learning，就是让模型同时学这3个任务，具体的让这3个任务的损失函数权重相加，然后一起反向传播更新参数；
+
 策略二：Continual Learning，先训练任务1，再训练任务2，再训练任务3，这种策略的缺点是容易遗忘前面任务的训练结果，最后训练出的模型容易对最后一个任务过拟合；
+
 策略三：Sequential Multi-task Learning，连续多任务学习，即第一轮的时候，先训练任务1，但不完全让它收敛训练完，第二轮，一起训练任务1和任务2，同样不让模型收敛完，第三轮，一起训练三个任务，直到模型收敛完。
 
 ## 微调数据介绍
@@ -88,12 +90,12 @@ train.txt/val.txt/test.txt 文件格式：
 
                 from paddlenlp import Taskflow
 
-cls = Taskflow("text_classification", task_path='checkpoint/export', is_static_model=True)
-cls(test_df.iloc[0, 2])
-                [2023-12-08 00:37:37,492] [    INFO] - Load id2label from checkpoint/export/id2label.json.
-                [{'predictions': [{'label': 'Personal Care Services',
-                    'score': 0.9765003992179774}],
-                  'text': 'Mariposa Hair Salon:When you choose Mariposa at Jason Avenue, youre choosing a life of style and sophistication. Youll enjoy top-of-the-line in-home features to make your everyday routine easy, from high-speed internet and cable TV access to a generous porch or balcony with a storage closet. Once you step outside, youll be greeted by a host of community amenities perfect for active 55+ adults, from a dog park to a petanque court and horseshoe pit. Make every minute count at Mariposa at Jason Avenue. The on'}]
+                cls = Taskflow("text_classification", task_path='checkpoint/export', is_static_model=True)
+                cls(test_df.iloc[0, 2])
+                                [2023-12-08 00:37:37,492] [    INFO] - Load id2label from checkpoint/export/id2label.json.
+                                [{'predictions': [{'label': 'Personal Care Services',
+                                    'score': 0.9765003992179774}],
+                                  'text': 'Mariposa Hair Salon:When you choose Mariposa at Jason Avenue, youre choosing a life of style and sophistication. Youll enjoy top-of-the-line in-home features to make your everyday routine easy, from high-speed internet and cable TV access to a generous porch or balcony with a storage closet. Once you step outside, youll be greeted by a host of community amenities perfect for active 55+ adults, from a dog park to a petanque court and horseshoe pit. Make every minute count at Mariposa at Jason Avenue. The on'}]
 
 ## 如何运行
 
