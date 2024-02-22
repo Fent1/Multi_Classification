@@ -92,6 +92,7 @@ train.txt/val.txt/test.txt 文件格式：
 
                 cls = Taskflow("text_classification", task_path='checkpoint/export', is_static_model=True)
                 cls(test_df.iloc[0, 2])
+
                 
                 [2023-12-08 00:37:37,492] [    INFO] - Load id2label from checkpoint/export/id2label.json.
                 [{'predictions': [{'label': 'Personal Care Services',
