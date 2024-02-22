@@ -44,6 +44,12 @@ train.txt/val.txt/test.txt 文件格式：
     <文本>^<标签>
     <文本>^<标签>
 
+train.txt示例:
+
+                Pope John Xxiii High School:Blackbaud K-12  ::  6 Bedford Farms Dr.  ::  2nd Fl, East Wing  ::  Bedford, NH 03110 Blackbaud K-12  ::  6 Bedford Farms Dr.  ::  2nd Fl, East Wing  ::  Bedford, NH 03110 Blackbaud K-12  ::  6 Bedford Farms Dr.  ::  2nd Fl, East Wing  ::  Bedford, NH 03110^Elementary and Secondary Schools
+                Boat Club:The Ottawa Boat Club is a beautiful, historic landmark located at the confluence of the Illinois and Fox Rivers in Ottawa, Illinois. Our building provides a unique and elegant space for all types of events, including weddings, small and large parties, benefits, and more. The Ottawa Boat Club was founded in 1885 as a nautical rowing and social club, and it has remained at its current location of 500 Columbus Street since 1903. If you're looking for a one-of-a-kind venue for your special event, th^Other Amusement and Recreation Industries
+
+
 ## 数据增强
 为了使数据中的标签平衡增加模型表现，我们采用过采样(Oversampling)方法：
 通过数据增强方法，如同义词替换等增加数据量少的标签的数据量。
