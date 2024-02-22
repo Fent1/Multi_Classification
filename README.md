@@ -80,7 +80,7 @@ train.txt/val.txt/test.txt 文件格式：
                 [2023-12-08 00:37:33,788] [    INFO] - Class name: Management  Scientific  and Technical Consulting Services
 
 
-<img src="https://github.com/Fent1/Multi_Classification/assets/43925272/b22b5893-5585-4d87-a52f-f127c06507dc" alt="image" width="300" height="auto">
+<img src="https://github.com/Fent1/Multi_Classification/assets/43925272/b22b5893-5585-4d87-a52f-f127c06507dc" alt="image" width="500" height="auto">
 
  - 对于这个数据集，模型性能很好，与之前的模型相比，准确率从30.42%增加到55.60%。
  - 精确率和召回率都很低，分别为32.37和35.51，这意味着这个分类模型仍然丢失一些特征的获取。
@@ -88,16 +88,9 @@ train.txt/val.txt/test.txt 文件格式：
 
 ## 模型预测
 
-                from paddlenlp import Taskflow
-
-                cls = Taskflow("text_classification", task_path='checkpoint/export', is_static_model=True)
-                cls(test_df.iloc[0, 2])
-
-                
-                [2023-12-08 00:37:37,492] [    INFO] - Load id2label from checkpoint/export/id2label.json.
                 [{'predictions': [{'label': 'Personal Care Services',
                                     'score': 0.9765003992179774}],
-                                  'text': 'Mariposa Hair Salon:When you choose Mariposa at Jason Avenue, youre choosing a life of style and sophistication. Youll enjoy top-of-the-line in-home features to make your everyday routine easy, from high-speed internet and cable TV access to a generous porch or balcony with a storage closet. Once you step outside, youll be greeted by a host of community amenities perfect for active 55+ adults, from a dog park to a petanque court and horseshoe pit. Make every minute count at Mariposa at Jason Avenue. The on'}]
+                                  'text': 'Mariposa Hair Salon:When you choose Mariposa at Jason Avenue, youre         choosing a life of style and sophistication. Youll enjoy top-of-the-line in-home features to make your everyday routine easy, from high-speed internet and cable TV access to a generous porch or balcony with a storage closet. Once you step outside, youll be greeted by a host of community amenities perfect for active 55+ adults, from a dog park to a petanque court and horseshoe pit. Make every minute count at Mariposa at Jason Avenue. The on'}]
 
 ## 如何运行
 
