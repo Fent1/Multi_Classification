@@ -92,8 +92,8 @@ train.txt/val.txt/test.txt 文件格式：
 
                 cls = Taskflow("text_classification", task_path='checkpoint/export', is_static_model=True)
                 cls(test_df.iloc[0, 2])
-                                [2023-12-08 00:37:37,492] [    INFO] - Load id2label from checkpoint/export/id2label.json.
-                                [{'predictions': [{'label': 'Personal Care Services',
+                [2023-12-08 00:37:37,492] [    INFO] - Load id2label from checkpoint/export/id2label.json.
+                [{'predictions': [{'label': 'Personal Care Services',
                                     'score': 0.9765003992179774}],
                                   'text': 'Mariposa Hair Salon:When you choose Mariposa at Jason Avenue, youre choosing a life of style and sophistication. Youll enjoy top-of-the-line in-home features to make your everyday routine easy, from high-speed internet and cable TV access to a generous porch or balcony with a storage closet. Once you step outside, youll be greeted by a host of community amenities perfect for active 55+ adults, from a dog park to a petanque court and horseshoe pit. Make every minute count at Mariposa at Jason Avenue. The on'}]
 
