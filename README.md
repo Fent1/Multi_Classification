@@ -10,7 +10,24 @@ Pychex公司想更详细地了解他们的目标客户群体，向我们提供�
 
 ## 网络爬虫
 由于提供的数据集含有网站链接，我们需要用到网络爬虫提取网站中可用的信息，并新生成为Text列，作为自变量用于训练模型。
-由于10000+网站爬虫耗时巨大，为了加快爬虫速度，我们采用多进程的方法，利用多个cpu进行计算和信息读取，将爬虫完成时间缩减到6个小时。
+由于10000+网站爬虫耗时巨大，为了加快爬虫速度，我们采用**多进程**的方法，利用多个cpu进行计算和信息读取，将爬虫完成时间缩减到6个小时，
+导入Python multiprocessing包以调用多进程方法：
+
+        import multiprocessing as mp # for faster processing taking advance of multiple cores
+
+我们不希望程序爬取每个网页的信息，所以我们希望它能根据我们提供的关键信息来爬取有用的网页：
+
+        slw = ['about', 'services', 'company', 'business',  'clients',
+            'information', 'missions', 'who-we-are', 'what-we-do', 'our-story',
+            'faq', 'questions-about-us', 'overview', 'background',
+            'goal', 'objectives', 'activities', 'our', 'summary', 'introduction']
+
+我们只关心长段的句子，所以只提取<p></p>选择器的内容:
+
+         s = BeautifulSoup(r.text, "html.parser") # get contents of the webpage based on Beautifulsoup
+        # t: text
+        t = s.findAll('p', string=True) # use findAll selector to get text
+
 
 <img src="https://github.com/Fent1/Multi_Classification/assets/43925272/2f879f23-714b-47b0-a3b5-46c90ec570ff" alt="image" width="300" height="auto">
 
