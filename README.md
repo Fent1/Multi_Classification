@@ -140,6 +140,15 @@ train.txt示例:
                                     'score': 0.9765003992179774}],
                                   'text': 'Mariposa Hair Salon:When you choose Mariposa at Jason Avenue, youre         choosing a life of style and sophistication. Youll enjoy top-of-the-line in-home features to make your everyday routine easy, from high-speed internet and cable TV access to a generous porch or balcony with a storage closet. Once you step outside, youll be greeted by a host of community amenities perfect for active 55+ adults, from a dog park to a petanque court and horseshoe pit. Make every minute count at Mariposa at Jason Avenue. The on'}]
 
+## 应用场景
+**智慧听鉴-火山引擎**
+
+![image](https://github.com/Fent1/Multi_Classification/assets/43925272/d2eeb78a-4fd8-4769-81ac-5058994be41d)
+
+抖音火山引擎的智慧听鉴业务用到了该技术，利用NLP模型对不同话术进行分类并打分；
+分数高的话术被分类为优秀话术供用户参考，极大地提高用户学习效率；
+分数低地话术表明服务质量低，能帮助一线管理者跟进员工话术执行情况、及时发现违规风险、掌握服务薄弱环节、辅助针对性培训提升。
+
 ## 如何运行
 
  1. 请先运行网络爬虫代码，请直接在Business_Industry_URLS.csv同目录下运行Starter_Web_Scraper_2.py。
